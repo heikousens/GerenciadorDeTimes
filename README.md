@@ -1,4 +1,4 @@
-# tp03-crud
+# Gerenciador de Times
 
 ## Project setup
 ```
