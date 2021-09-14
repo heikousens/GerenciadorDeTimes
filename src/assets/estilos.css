@@ -1,0 +1,102 @@
+.form{
+    width: 60%;
+    margin: auto;
+}
+
+.buttons{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+h3{
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+.tabela-times{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5em;
+}
+
+.divider{
+    width:20px;
+    height:auto;
+    display:inline-block;
+}
+
+.tabela-jogadores{
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+.tabela-gerenciar{
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+.botao-editar{
+    background-color: #198754 !important;
+    color: #fff;
+    border-color: #198754 !important;
+}
+
+.botao-editar:hover{
+    background-color: #146c43 !important;
+    color: #fff;
+    border-color: #146c43 !important;
+}
+
+.botao-apagar{
+    background-color: #dc3545 !important;
+    color: #fff;
+    border-color: #dc3545 !important;
+}
+
+.botao-apagar:hover{
+    background-color: #c32232 !important;
+    color: #fff;
+    border-color: #c32232 !important;
+}
+
+.botao-jogadores{
+    background-color: #2196F3 !important;
+    color: #fff;
+    border-color: #2196F3 !important;
+}
+
+.botao-jogadores:hover{
+    background-color:  #0b7dda !important;
+    color: #fff;
+    border-color:  #0b7dda !important;
+}
+.botao-cadastro{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.form-buttons{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+
+}
+
+.home-text{
+    text-align: center;
+}
