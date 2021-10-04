@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">TP03 - Vue.js</a>
+    <a class="navbar-brand" href="#">Assessment - Vue.js</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -18,6 +18,15 @@
             <router-link to="/times" class="dropdown-item">Lista de Times</router-link>
             <router-link to="/times/cadastratime" class="dropdown-item">Cadastrar Time</router-link>
             <router-link to="/times/gerenciartimes" class="dropdown-item">Gerenciar Times</router-link>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Partidas
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <router-link to="/partidas" class="dropdown-item">Lista de Partidas</router-link>
+            <router-link to="/partidas/cadastrarpartida" class="dropdown-item">Cadastrar Partida</router-link>
           </ul>
         </li>
       </ul>

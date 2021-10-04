@@ -10,12 +10,13 @@
     <table class="table tabela-times">
     <thead>
       <tr>
-        <th scope="col">Nome</th>
-        <th scope="col">Fundação</th>
-        <th scope="col">Estado</th>
-        <th scope="col">Cidade</th>
-        <th scope="col">Técnico</th>
-        <th scope="col">Detalhes</th>
+        <th>Nome</th>
+        <th>Fundação</th>
+        <th>Estado</th>
+        <th>Cidade</th>
+        <th>Gols</th>
+        <th>Técnico</th>
+        <th>Detalhes</th>
       </tr>
     </thead>
     <tbody>
@@ -24,6 +25,7 @@
         <td>{{ time.ano_fundacao }}</td>
         <td>{{ time.estado }}</td>
         <td>{{ time.cidade }}</td>
+        <td>{{ time.qtd_gols }}</td>
         <td>{{ time.tecnico }}</td>
         <td>{{ time.info }}</td>
       </tr>
@@ -41,17 +43,21 @@
 <script>
 import axios from "axios";
 
-let timeNovo = () => {
+let timeNovo = (max) => {
+  let max_id = max || 0
   return{
-        'id': "INCREMENT",
-        nome: "",
-        ano_fundacao: "",
-        estado: "",
-        cidade: "",
-        tecnico: "",
-        info: "",
+        'id': max_id + 1,
+        'nome': "",
+        'ano_fundacao': "",
+        'estado': "",
+        'cidade': "",
+        'qtd_gols': 0,
+        'tecnico': "",
+        'info': "",
       }
 }
+
+const URL = 'http://localhost:3000/times';
 
 export default {
   name: 'Times',
@@ -71,7 +77,7 @@ export default {
   },
   mounted() {
     this.carregando = true
-    axios.get('https://sheetdb.io/api/v1/2bcn7bgyeiivy').then(({data}) => {
+    axios.get(URL).then(({data}) => {
       this.times = data
       this.carregando = false
     })

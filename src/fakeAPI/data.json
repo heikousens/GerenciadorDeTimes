@@ -1,0 +1,114 @@
+{
+  "times": [
+    {
+      "id": 1,
+      "nome": "São Paulo",
+      "ano_fundacao": "1930",
+      "estado": "SP",
+      "cidade": "São Paulo",
+      "qtd_gols": 0,
+      "tecnico": "Hernán Crespo",
+      "info": "Eliminado"
+    },
+    {
+      "id": 2,
+      "nome": "Botafogo",
+      "ano_fundacao": "1910",
+      "estado": "RJ",
+      "cidade": "Rio de Janeiro",
+      "qtd_gols": 0,
+      "tecnico": "Enderson Moreira",
+      "info": "De mal a pior"
+    },
+    {
+      "id": 3,
+      "nome": "América MG",
+      "ano_fundacao": "1912",
+      "estado": "MG",
+      "cidade": "Belo Horizonte",
+      "qtd_gols": "0",
+      "tecnico": "Vagner Mancini",
+      "info": "Triste"
+    }
+  ],
+  "jogadores": [
+    {
+      "id": 1,
+      "nome": "Jorge",
+      "camisa": "1",
+      "salario": "9000",
+      "qtd_gols": 0,
+      "posicao": "Lateral esquerda",
+      "time_id": "2"
+    },
+    {
+      "id": 2,
+      "nome": "Bernardo",
+      "camisa": "4",
+      "salario": "7000",
+      "qtd_gols": 0,
+      "posicao": "Zagueiro",
+      "time_id": "2"
+    },
+    {
+      "id": 3,
+      "nome": "Thiago",
+      "camisa": "13",
+      "salario": "15000",
+      "qtd_gols": 0,
+      "posicao": "Atacante",
+      "time_id": "1"
+    },
+    {
+      "id": 4,
+      "nome": "Pedro",
+      "camisa": "9",
+      "salario": "10000",
+      "qtd_gols": 0,
+      "posicao": "Zagueiro",
+      "time_id": "1"
+    }
+  ],
+  "partidas": [
+    {
+      "id": 1,
+      "time_casa": "São Paulo",
+      "time_visitante": "Botafogo",
+      "gols_casa": "1",
+      "gols_visitante": 1
+    },
+    {
+      "id": 2,
+      "time_casa": "São Paulo",
+      "time_visitante": "Botafogo",
+      "gols_casa": 1,
+      "gols_visitante": 0
+    }
+  ],
+  "gols": [
+    {
+      "time_gol": "São Paulo",
+      "jogador": "Pedro",
+      "partida_id": "1",
+      "id": 1
+    },
+    {
+      "time_gol": "Botafogo",
+      "jogador": "Jorge",
+      "partida_id": "1",
+      "id": 2
+    },
+    {
+      "time_gol": "15 de 14",
+      "jogador": "Felipe",
+      "partida_id": "3",
+      "id": 3
+    },
+    {
+      "time_gol": "Botafogo",
+      "jogador": "Jorge",
+      "partida_id": "3",
+      "id": 4
+    }
+  ]
+}

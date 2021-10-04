@@ -29,17 +29,20 @@ import Campo from '../components/Campo.vue';
 import CampoDropdown from '../components/CampoDropdown.vue';
 import CampoText from '../components/CampoText.vue';
 
-let timeNovo = () => {
+let timeNovo = (max) => {
+  let max_id = max || 0
   return{
-        'id': "INCREMENT",
-        nome: "",
-        ano_fundacao: "",
-        estado: "",
-        cidade: "",
-        tecnico: "",
-        info: "",
+        'id': max_id + 1,
+        'nome': "",
+        'ano_fundacao': "",
+        'estado': "",
+        'cidade': "",
+        'tecnico': "",
+        'info': "",
       }
 }
+
+const URL = 'http://localhost:3000/times';
 
 export default {
   name: 'CadastraTimes',
@@ -70,21 +73,21 @@ export default {
     salvar(){
       this.carregando = true;
       if(this.editando){
-        axios.put(`https://sheetdb.io/api/v1/2bcn7bgyeiivy/id/${this.time.id}`, 
-        {data: [this.time]})
+        axios.put(`${URL}/${this.time.id}`, 
+        { ...this.time })
           .then(() => {
             Object.assign(this.editando, this.time)
-            this.time = timeNovo()
+            this.time = timeNovo(Math.max(...this.times.map(t => t.id)))
             this.carregando = false
             this.editando = false
         })
 
       } else {
-        axios.post('https://sheetdb.io/api/v1/2bcn7bgyeiivy', 
-        {data: [this.time]})
+        axios.post(URL, 
+        { ...this.time })
           .then(() => {
           this.times.push(this.time)
-          this.time = timeNovo();
+          this.time = timeNovo(Math.max(...this.times.map(t => t.id)));
           this.carregando = false;
           this.timeCriado = true;
       })
@@ -92,7 +95,7 @@ export default {
     },
     apagar(time,index){
       this.carregando = true;
-      axios.delete(`https://sheetdb.io/api/v1/2bcn7bgyeiivy/id/${time.id}/`)
+      axios.delete(`${URL}/${time.id}/`)
       .then(()=>{
         this.times.splice(index, 1)
         this.carregando = false;
@@ -105,9 +108,10 @@ export default {
   },
   mounted() {
     this.carregando = true
-    axios.get('https://sheetdb.io/api/v1/2bcn7bgyeiivy').then(({data}) => {
+    axios.get(URL).then(({data}) => {
       this.times = data
       this.carregando = false
+      this.time = timeNovo(Math.max(...this.times.map(t => t.id)))
     })
   }
 }

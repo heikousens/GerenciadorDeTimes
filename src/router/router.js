@@ -4,6 +4,9 @@ import Times from "../views/Times.vue";
 import CadastraTime from "../views/CadastraTime.vue";
 import GerenciarTimes from "../views/GerenciarTimes.vue";
 import Jogadores from "../views/Jogadores.vue";
+import Partidas from "../views/Partidas.vue";
+import CadastrarPartida from "../views/CadastrarPartida.vue";
+import Gols from "../views/Gols.vue";
 
 const routes = [
   {
@@ -27,9 +30,24 @@ const routes = [
     component: GerenciarTimes,
   },
   {
-    path: "/times/gerenciartimes/:time_id",
+    path: "/jogadores/:time_id",
     name: "Jogadores",
     component: Jogadores,
+  },
+  {
+    path: "/partidas",
+    name: "Partidas",
+    component: Partidas,
+  },
+  {
+    path: "/partidas/cadastrarpartida",
+    name: "CadastrarPartida",
+    component: CadastrarPartida,
+  },
+  {
+    path: "/partidas/:partida_id",
+    name: "Gols",
+    component: Gols,
   },
 ];
 
